@@ -5,3 +5,4 @@ venv
 .venv
 .python-version
 pyproject.toml
+example.py

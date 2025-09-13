@@ -1,14 +1,16 @@
 from brigadier import StringReader
 
+
 def test_can_read():
     reader = StringReader("abc")
-    assert reader.can_read() == True
+    assert reader.can_read() is True
     reader.skip()
-    assert reader.can_read() == True
+    assert reader.can_read() is True
     reader.skip()
-    assert reader.can_read() == True
+    assert reader.can_read() is True
     reader.skip()
-    assert reader.can_read() == False
+    assert reader.can_read() is False
+
 
 def test_get_remaining_length():
     reader = StringReader("abc")
@@ -20,13 +22,15 @@ def test_get_remaining_length():
     reader.set_cursor(3)
     assert reader.get_remaining_length() == 0
 
+
 def test_can_read_length():
     reader = StringReader("abc")
-    assert reader.can_read(1) == True
-    assert reader.can_read(2) == True
-    assert reader.can_read(3) == True
-    assert reader.can_read(4) == False
-    assert reader.can_read(5) == False
+    assert reader.can_read(1) is True
+    assert reader.can_read(2) is True
+    assert reader.can_read(3) is True
+    assert reader.can_read(4) is False
+    assert reader.can_read(5) is False
+
 
 def test_peek():
     reader = StringReader("abc")
@@ -35,6 +39,7 @@ def test_peek():
     reader.set_cursor(2)
     assert reader.peek() == "c"
     assert reader.get_cursor() == 2
+
 
 def test_peek_length():
     reader = StringReader("abc")
