@@ -3,3 +3,5 @@
 .vscode
 venv
 .venv
+.python-version
+pyproject.toml
