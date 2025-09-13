@@ -89,7 +89,10 @@ class CommandDispatcher:
                     found_command = True
                     try:
                         value = context.get_command()(context)
-                        result += value if value else 1
+                        if isinstance(value, (int, float)):
+                            result += value if value else 1
+                        else:
+                            return value
                         self.consumer.on_command_complete(context, True, value)
                         successful_forks += 1
                     except CommandSyntaxException as e:
