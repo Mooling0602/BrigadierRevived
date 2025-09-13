@@ -27,6 +27,25 @@ def _syntax_get_pickone_literals(_entries: str) -> list[str]:
     return []
 
 
+def _syntax_get_pickone_optional_literals(_entries: str) -> list[str]:
+    match = re.match(__command_literal_pickone_optional_regex, _entries)
+    if match:
+        inner = _entries[1:-1]
+        return inner.split("|")
+    return []
+
+
+def _syntax_get_literal_optional(_entry: str) -> str:
+    match = re.match(__command_literal_optional, _entry)
+    if match:
+        return _entry[1:-1]
+    return ""
+
+
+def _syntax_is_variadic(_entry: str) -> bool:
+    return re.match(__command_variadic, _entry) is not None
+
+
 class SimpleCommandBuilder:
     def __init__(self):
         pass
