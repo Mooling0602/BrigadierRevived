@@ -6,3 +6,4 @@ venv
 .python-version
 pyproject.toml
 example.py
+uv.lock
