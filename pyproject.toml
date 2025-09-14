@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brigadierrevived"
+version = "1.1.0"
+description = "Implementation of Mojang's brigadier in Python"
+license = { text = "MIT" }
+authors = [{ name = "thelennylord" }, { name = "Mooling0602", email = "clemooling@outlook.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["brigadier"]
+
+[tool.mypy]
+python_version = "3.9"
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+strict_optional = true
+disallow_any_unimported = true
+disallow_any_expr = true
+disallow_any_decorated = true
+disallow_any_generics = true
+disallow_any_explicit = true
+disallow_subclassing_any = true
