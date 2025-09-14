@@ -11,13 +11,13 @@ string = string()
 greedy_string = greedy_string()
 
 __all__ = [
-    IntegerArgumentType,
-    FloatArgumentType,
-    StringArgumentType,
-    boolean,
-    integer,
-    float_type,
-    word,
-    string,
-    greedy_string,
+    "IntegerArgumentType",
+    "FloatArgumentType",
+    "StringArgumentType",
+    "boolean",
+    "integer",
+    "float_type",
+    "word",
+    "string",
+    "greedy_string",
 ]
