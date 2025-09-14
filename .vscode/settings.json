@@ -1,0 +1,28 @@
+{
+    "python.analysis.typeCheckingMode": "strict",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.diagnosticMode": "workspace",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportUnknownMemberType": "warning",
+        "reportUnknownArgumentType": "warning",
+        "reportUnknownParameterType": "warning",
+        "reportUnknownLambdaType": "warning",
+        "reportUnknownVariableType": "warning",
+        "reportGeneralTypeIssues": "warning",
+        "reportUntypedFunctionDecorator": "warning",
+        "reportUntypedClassDecorator": "warning",
+        "reportUntypedBaseClass": "warning",
+        "reportUntypedNamedTuple": "warning",
+        "reportMissingTypeStubs": "warning",
+        "reportUnnecessaryIsInstance": "warning",
+        "reportUnnecessaryCast": "warning"
+    },
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    }
+}
